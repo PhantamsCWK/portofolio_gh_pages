@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const Fishing = () => {
+const HookFish = () => {
   return (
     <motion.div
       className='fixed left-10  h-96 w-20 flex flex-col justify-start items-center z-10'
@@ -13,4 +13,4 @@ const Fishing = () => {
   )
 }
 
-export default Fishing
+export default HookFish
