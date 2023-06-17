@@ -21,7 +21,7 @@ const Shark = ({ isMobile }) => {
       <primitive 
         object={shark.scene}
         scale={isMobile ? 2.5 : 4}
-        position={[0,0,0]}
+        position={[0,0.5,0]}
       />
     </mesh>
   )

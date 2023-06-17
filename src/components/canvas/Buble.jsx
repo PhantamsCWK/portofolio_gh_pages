@@ -1,8 +1,7 @@
-import React, { Suspense, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import {
   Decal,
-  Float,
   OrbitControls,
   Preload,
   useTexture,
@@ -12,17 +11,12 @@ import CanvasLoader from "../Loader";
 
 const Bubble = ({ imgUrl }) => {
   const [decal] = useTexture([imgUrl]);
-  const meshRef = useRef();
-
-  useFrame(() => {
-    meshRef.current.rotation.y += Math.random() * Math.PI * 0.0005;
-  });
 
   return (
     <>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh ref={meshRef} castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={2.75}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshBasicMaterial
           color='#13255A'
