@@ -3,27 +3,10 @@ import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
 import { SharkCanvas } from './canvas'
-import { slideIn } from '../utils/motion'
+import { useMediaQuery } from '../hooks'
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
-
-    setIsMobile(mediaQuery.matches)
-
-    const handleMediaQueryChange = e => {
-      setIsMobile(e.matches)
-    }
-
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', 
-      handleMediaQueryChange)
-    }
-  }, [])
+  const isMobile = useMediaQuery("(max-width: 500px)");
   
 
   return (
@@ -36,14 +19,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      <motion.div
-        variants={slideIn('right', "tween", 0.2, 1)}
-        className=' relative w-full h-full'
-      >
-        <SharkCanvas isMobile={isMobile} />
-
-      </motion.div>
+      <SharkCanvas isMobile={isMobile} />
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href="#about">
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>

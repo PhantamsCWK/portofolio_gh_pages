@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
 
-const Shark = (isMobile) => {
+const Shark = ({ isMobile }) => {
   const shark = useGLTF('./shark/scene.gltf')
   return (
     <mesh>
@@ -20,14 +20,14 @@ const Shark = (isMobile) => {
       />
       <primitive 
         object={shark.scene}
-        scale={5}
+        scale={isMobile ? 2.7 : 5}
         position={[0,-3,0]}
       />
     </mesh>
   )
 }
 
-const SharkCanvas = (isMobile) => {
+const SharkCanvas = ({ isMobile }) => {
   return (
     <Canvas
       frameloop='demand'

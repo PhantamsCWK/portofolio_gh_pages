@@ -48,38 +48,38 @@ const Contact = () => {
           <ul className='mt-10 flex flex-col gap-8'>
             <li 
               onClick={() => handleClick("+62-896-3990-3653")}
-              className='flex gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
+              className='flex flex-wrap justify-start items-center gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
             >
               <AiOutlineWhatsApp size={30} />
-              <span className=' text-xl'>
+              <span className='text-md'>
                 +62-896-3990-3653
               </span>
               
             </li>
             <li
               onClick={() => handleClick("chandrawijaya270805@gmail.com")}
-              className='flex gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
+              className='flex flex-wrap justify-start items-center gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
             >
               <AiOutlineMail size={30} />
-              <span className=' text-xl'>
+              <span className='text-md'>
                 chandrawijaya270805@gmail.com
               </span>
             </li>
             <li 
               onClick={() => handleClick("https://www.instagram.com/chanwisuma/?hl=id")}
-              className='flex gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
+              className='flex flex-wrap justify-start items-center gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
             >
               <AiOutlineInstagram size={30} />
-              <span className=' text-xl'>
+              <span className='text-md'>
                 @chanwisuma
               </span>
             </li>
             <li 
               onClick={() => handleClick("https://github.com/PhantamsCWK")}
-              className='flex gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
+              className='flex flex-wrap justify-start items-center gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
             >
               <AiOutlineGithub size={30} />
-              <span className=' text-xl'>
+              <span className='text-md'>
                 PhantamsCWK
               </span>
             </li>
