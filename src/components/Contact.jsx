@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import { AiOutlineWhatsApp, AiOutlineMail, AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai"
 
 import { styles } from '../styles';
