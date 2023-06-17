@@ -10,13 +10,12 @@ import {
 
 import CanvasLoader from "../Loader";
 
-const Bubble = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+const Bubble = ({ imgUrl }) => {
+  const [decal] = useTexture([imgUrl]);
   const meshRef = useRef();
 
   useFrame(() => {
-    meshRef.current.rotation.x += 0.01;
-    meshRef.current.rotation.y += 0.01;
+    meshRef.current.rotation.y += Math.random() * Math.PI * 0.0005;
   });
 
   return (
@@ -28,15 +27,10 @@ const Bubble = (props) => {
         <meshBasicMaterial
           color='#13255A'
           opacity={0.7}
-          // polygonOffset
-          // polygonOffsetFactor={100}
+          polygonOffset
+          polygonOffsetFactor={100}
           flatShading
         />
-        {/* <meshStandardMaterial 
-          color="#87CEEB" 
-          transparent
-          polygonOffset
-          polygonOffsetFactor={-5} />  */}
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 0]}
@@ -50,10 +44,10 @@ const Bubble = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BubbleCanvas = ({ icon }) => {
   return (
     <Canvas
-      frameloop='demand'
+      frameloop='always'
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
@@ -67,4 +61,4 @@ const BallCanvas = ({ icon }) => {
   );
 };
 
-export default BallCanvas;
+export default BubbleCanvas;
