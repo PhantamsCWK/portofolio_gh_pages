@@ -61,7 +61,7 @@ const Contact = () => {
               className='flex flex-wrap justify-start items-center gap-2 bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium hover:cursor-pointer'
             >
               <AiOutlineMail size={30} />
-              <span className='text-md'>
+              <span className='text-xs sm:text-md'>
                 chandrawijaya270805@gmail.com
               </span>
             </li>
