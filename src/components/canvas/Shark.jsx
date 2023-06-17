@@ -11,7 +11,7 @@ const Shark = ({ isMobile }) => {
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight 
-        position={[-20, 50, 10]}
+        position={[-10, 50, 10]}
         angle={0.12}
         penumbra={1}
         intensity={1}
@@ -20,8 +20,8 @@ const Shark = ({ isMobile }) => {
       />
       <primitive 
         object={shark.scene}
-        scale={isMobile ? 2.7 : 5}
-        position={[0,-3,0]}
+        scale={isMobile ? 2.5 : 4}
+        position={[0,0,0]}
       />
     </mesh>
   )

@@ -6,7 +6,7 @@ import { SharkCanvas } from './canvas'
 import { useMediaQuery } from '../hooks'
 
 const Hero = () => {
-  const isMobile = useMediaQuery("(max-width: 500px)");
+  const isMobile = useMediaQuery("(max-width: 758px)");
   
 
   return (
