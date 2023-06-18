@@ -2,7 +2,7 @@
   "name": "3dfolio",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://PhantamsCWK.github.io/portofolio_deploy_gh",
+  "homepage": "https://PhantamsCWK.github.io/portofolio_gh_pages",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
