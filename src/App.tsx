@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, ParticlesCanvas, HookFish } from "./components"
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, HookFish } from "./components"
 import { useDeviceDetect } from './hooks'
 
 const App = () => {
@@ -40,7 +40,7 @@ const App = () => {
                 <div className='bg-gradient-to-t from-red-500 z-0'>
                   <Contact />
                 </div>
-              <ParticlesCanvas />
+              {/* <ParticlesCanvas /> */}
             </div>
           </BrowserRouter>
         )

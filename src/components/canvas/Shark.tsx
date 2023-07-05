@@ -1,15 +1,17 @@
-import React, { Suspense, useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useAnimations, useGLTF } from '@react-three/drei'
 
 import CanvasLoader from '../Loader'
 
-const Shark = ({ isMobile }) => {
+const Shark = ({ isMobile } : { isMobile: boolean } ) => {
   const { scene, animations } = useGLTF('./shark/shark.glb')
   const { ref, actions, names } = useAnimations(animations)
 
   useEffect(() => {
-    actions[names].play();
+    const name = names[0]
+    actions[name]?.play()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
 
@@ -35,7 +37,7 @@ const Shark = ({ isMobile }) => {
   )
 }
 
-const SharkCanvas = ({ isMobile }) => {
+const SharkCanvas = ({ isMobile } : { isMobile: boolean }) => {
   return (
     <Canvas
       frameloop='always'

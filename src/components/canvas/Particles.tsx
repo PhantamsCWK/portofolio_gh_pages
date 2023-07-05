@@ -1,19 +1,21 @@
+/* eslint-disable */
 import { useRef ,Suspense } from 
 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial, Preload } from '@react-three/drei';
-import * as random from 'maath/random/dist/maath-random.cjs';
-import { Mesh } from 'three';
+import * as random from 'maath/random';
 
 const Particles = () => {
-  const ref = useRef<Mesh>(new Mesh);
+  const ref = useRef<any>(null);
   
-  const sphere = random.inSphere(new Float32Array(1000), { radius: 1 });
+  const sphere = Float32Array.from(random.inSphere(new Float32Array(1000), { radius: 1 }));
 
   useFrame((_state, delta) => {
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
   })
+
+  console.log(sphere)
 
 
   return (
